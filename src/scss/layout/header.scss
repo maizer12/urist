@@ -1,0 +1,147 @@
+// =====================================================================================================================
+.header {
+	width: 100%;
+	padding: 20px 0 16px;
+	border-bottom: solid 1px;
+	@include rgbaColor(bac, black, 0.6);
+	@include rgbaColor(bor, #fff, 0.2);
+	&__logo {
+		max-width: 238px;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+}
+.menu {
+	&__list {
+		display: flex;
+		column-gap: 80px;
+	}
+	&__link {
+		color: #fff;
+		font-family: Open Sans;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+		@include hoverColor($hoverColor);
+		@include hoverLink($hoverColor);
+	}
+}
+.socials {
+	display: flex;
+	column-gap: 40px;
+	margin-right: 96px;
+	&__link {
+		@include flexCenter();
+		@include hoverSvg(#fff, 0.4s);
+    transition: 0.4s;
+		padding: 3px;
+		&:hover {
+			background-color: $hoverColor;
+		}
+	}
+	&:hover {
+	}
+}
+.language {
+	margin-right: 62px;
+	display: flex;
+	column-gap: 20px;
+	&__item {
+		position: relative;
+		font-family: Open Sans;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.3;
+		color: #fff;
+		@include hoverColor($hoverColor);
+		cursor: pointer;
+		span {
+			pointer-events: none;
+			font-family: Open Sans;
+			font-size: 20px;
+			font-weight: 400;
+			line-height: 1.3;
+			right: -12px;
+			color: #fff;
+			position: absolute;
+		}
+		&:last-child {
+			span {
+				color: red;
+				display: none;
+			}
+		}
+	}
+}
+.language-item-active {
+	color: $hoverColor;
+}
+.header-contacts {
+	&__link {
+		font-family: Open Sans;
+		font-size: 20px;
+		font-weight: 400;
+		color: #fff;
+		line-height: 1.3;
+		@include hoverColor($hoverColor);
+		@include hoverLink($hoverColor);
+	}
+}
+// =====================================================================================================================
+
+// Burger
+/*
+.icon-menu {
+  display: none;
+  @include media(767) {
+    display: block;
+    position: relative;
+    width: rem(30);
+    height: rem(18);
+    cursor: pointer;
+    z-index: 5;
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 300ms ease 0ms;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #000;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+*/
