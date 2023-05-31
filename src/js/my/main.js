@@ -22,3 +22,18 @@ allItemsSer?.addEventListener('click', (e)=>{
 		item.classList.toggle('services-item-open-det')
 	}
 })
+
+//map
+const mapImg = document.querySelector('.map-img')
+
+//mouseover
+//click
+mapImg?.addEventListener('mouseover', (e)=>{
+	const elem = e.target.dataset.piece
+	const element = document.querySelector('[data-text="'+ elem +'"]');
+	const active = document.querySelector('.active-path-text')
+	if(active){
+		active.classList.remove('active-path-text')
+	}
+	element.classList.add('active-path-text')
+})

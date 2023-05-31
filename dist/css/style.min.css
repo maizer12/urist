@@ -738,9 +738,18 @@ body.lock {
   width: 100%;
   padding-top: 170px;
 }
-.map svg path {
+.map path {
+  transition: 0.6s;
   cursor: pointer;
 }
-.map svg path:hover {
-  filter: invert(1);
+.map path:hover {
+  fill: #c2873f;
+}
+
+.active-path-text {
+  fill: #fff;
+}
+
+[data-text] {
+  pointer-events: none;
 }
