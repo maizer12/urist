@@ -1,11 +1,29 @@
 //rgba create
 
+
+@mixin paddingAll($size){
+  padding-bottom: $size;
+  &:last-child{
+    padding-bottom: 0; 
+  }
+}
+
+@mixin columnGap($row-gap){
+  display: flex;
+  flex-direction: column;
+  row-gap: $row-gap;
+}
+
 @mixin flexCenter(){
   display: flex;
   justify-content: center;
   align-items:center;
 }
 @mixin hoverSvg($color, $sec){
+  img{
+    transition: $sec;
+    pointer-events:none;
+  }
   svg{
     path{
       transition: $sec;
@@ -16,6 +34,9 @@
       path{
         fill:$color;
       }
+    }
+    img{
+      filter: brightness(100);
     }
   }
 }
