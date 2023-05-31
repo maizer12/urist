@@ -88,6 +88,7 @@
 	&__items {
 		display: flex;
 		justify-content: space-between;
+		column-gap: 20px;
 	}
 }
 .services-item {
@@ -255,5 +256,33 @@
 		width: fit-content;
 		display: block;
 		@include hoverColor($hoverColor);
+	}
+}
+.map {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		margin-bottom: 10px;
+	}
+	&__sub-title {
+		font-weight: 500;
+	}
+	&__text {
+		max-width: 455px;
+		width: 100%;
+		padding-top: 170px;
+	}
+	svg {
+		path {
+			//fill: red;
+			cursor: pointer;
+			//color: #fff;
+			&:hover {
+				filter: invert(1);
+				//fill: red;
+			}
+		}
 	}
 }
