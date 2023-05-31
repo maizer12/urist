@@ -259,6 +259,7 @@
 	}
 }
 .map {
+	padding-bottom: 85px;
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -285,6 +286,78 @@
 .active-path-text {
 	fill: #fff;
 }
-[data-text]{
+[data-text] {
 	pointer-events: none;
+}
+.about-me {
+	@include blackTop(black, 0.9);
+
+	&__container {
+		display: flex;
+		z-index: 2;
+		position: relative;
+		align-items: center;
+		padding: 20px 0 50px;
+		column-gap: 128px;
+		max-width: 1670px;
+	}
+	&__img {
+		position: absolute;
+		bottom: 0;
+		left:0;
+		height: 97%;
+	}
+	&__content {
+		max-width: 986px;
+		margin-left: auto;
+		padding-top: 30px; 
+	}
+	&__title {
+		margin-bottom: 25px;
+		color: #fff;
+	}
+	&__sub-title {
+		color: #fff;
+		margin-bottom: 35px;
+	}
+	&__name {
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.2;
+		color: #fff;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 18px;
+	}
+	&__item {
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.2;
+		@include paddingAll(27px);
+		letter-spacing: 0em;
+		text-align: left;
+		color: #fff;
+	}
+	&__footer {
+		margin-top: 32px;
+		display: flex;
+		justify-content: space-between;
+		padding-right: 143px;
+		align-items:flex-end;
+	}
+	&__data-name {
+		color: #fff;
+		margin-bottom: 10px;
+	}
+	&__experience {
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+		color:#fff;
+	}
 }
