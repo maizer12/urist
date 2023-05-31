@@ -3,7 +3,9 @@
 	width: 100%;
 	padding: 20px 0 16px;
 	border-bottom: solid 1px;
-	@include rgbaColor(bac, black, 0.6);
+	position: absolute;
+	z-index: 2;
+	
 	@include rgbaColor(bor, #fff, 0.2);
 	&__logo {
 		max-width: 238px;
@@ -47,8 +49,6 @@
 		&:hover {
 			background-color: $hoverColor;
 		}
-	}
-	&:hover {
 	}
 }
 .language {
