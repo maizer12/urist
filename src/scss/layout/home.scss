@@ -625,3 +625,159 @@
 		}
 	}
 }
+@media (max-width: 1700px) {
+	.banner__content{
+		max-width: 800px;
+	}
+	.banner__title {
+		font-size: 50px;
+	}
+	.banner__sub-title {
+		font-size: 21px;
+		margin-bottom: 40px;
+	}
+	.banner-list__name {
+		font-size: 18px;
+		margin-bottom: 15px;
+	}
+	.banner-list__item{
+		font-size: 17px;
+	}
+	.banner-list{
+		margin-bottom: 45px;
+	}
+	.banner__text{
+		margin-bottom: 48px;
+		font-size: 18px;
+	}
+	.banner__img{
+		max-width: 58%;
+	}
+}
+@media (max-width: 1600px) {
+	.banner__content{
+		max-width: 700px;
+	}
+}
+
+@media (max-width: 1200px){
+	.banner__content{
+		max-width: 58%;
+	}
+	.banner__title {
+		font-size: 38px;
+	}
+	.banner__sub-title {
+		font-size: 16px;
+		margin-bottom: 25px;
+	}
+	.banner-list__name {
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	.banner-list__item{
+		font-size: 14px;
+	}
+	.banner-list{
+		margin-bottom: 35px;
+	}
+	.banner__text{
+		margin-bottom: 38px;
+		font-size: 14px;
+		max-width: 75%;
+	}
+	.banner__img{
+		max-width: 58%;
+	}
+	.banner__btn{
+		padding: 14px 18px;
+		font-size: 16px;
+	}
+}
+@media(max-width: 1024px) or (max-height: 650px){
+	.banner{
+		height: 100%;
+	}
+	.banner__img{
+		display: none;
+	}
+	.banner__content{
+		max-width: 100%;
+	}
+	.banner{
+		padding-bottom: 100px;
+	}
+}
+@media(max-width: 600px){
+	.banner__content{
+		max-width: 100%;
+	}
+	.banner__title {
+		font-size: 28px;
+		margin-bottom: 6px;
+	}
+	.banner__sub-title {
+		font-size: 14px;
+		margin-bottom: 18px;
+	}
+	.banner-list__name {
+		font-size: 14px;
+		margin-bottom: 7px;
+	}
+	.banner-list__item{
+		font-size: 14px;
+	}
+	.banner-list{
+		margin-bottom: 25px;
+	}
+	.banner__text{
+		margin-bottom: 28px;
+		font-size: 14px;
+	}
+	.banner__btn{
+		padding: 12px 16px;
+		font-size: 14px;
+	}
+	.banner{
+		padding-bottom: 80px;
+	}
+}
+@media(max-width: 450px){
+	.banner{
+		background-image:url('../../images/banner/adapt-bg-home.jpg');
+		&::before{
+			opacity: 0.7;
+		}
+	}
+	.banner__title {
+		font-size: 24px;
+		margin-bottom: 2px;
+	}
+	.banner__sub-title {
+		font-size: 12px;
+		margin-bottom: 30px;
+	}
+	.banner-list__name {
+		font-size: 14px;
+		margin-bottom: 7px;
+	}
+	.banner-list__item{
+		font-size: 14px;
+	}
+	.banner-list{
+		margin-bottom: 30px;
+	}
+	.banner__text{
+		margin-bottom: 30px;
+		font-size: 12px;
+		max-width: 100%;
+	}
+	.banner__btn{
+		padding: 17px 16px;
+		width: 100%;
+		font-size: 18px;
+	}
+	.banner{
+		padding-bottom: 34px;
+	}
+}

@@ -36,6 +36,11 @@
 		color: $hoverColor;
 		@include hoverColor(#fff);
 	}
+	.socials {
+		margin-top: 30px;
+		margin-right: 0;
+		column-gap: 20px;
+	}
 }
 .footer-column {
 	max-width: 252px;
@@ -114,5 +119,25 @@
 				border-color: #fff;
 			}
 		}
+	}
+}
+.footer-list {
+	&__items {
+		margin-top: 30px;
+	}
+	&__item {
+		@include paddingAll(14px);
+	}
+	&__link {
+		font-family: Montserrat;
+		font-size: 16px;
+		color: #fff;
+		width: fit-content;
+		font-weight: 400;
+		line-height: 1.1;
+		letter-spacing: 0em;
+		text-align: left;
+		@include hoverColor($hoverColor);
+		@include hoverLink($hoverColor);
 	}
 }
