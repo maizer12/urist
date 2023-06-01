@@ -553,7 +553,7 @@
 .questions {
 	padding: 84px 0;
 	background-image: url('../../images/bg-qe.jpg');
-	background-size:cover;
+	background-size: cover;
 	&__title {
 		font-family: Montserrat;
 		font-size: 40px;
@@ -585,7 +585,43 @@
 	.socials {
 		column-gap: 20px;
 	}
-	.header-contacts__link{
-		font-size:30px;
+	.header-contacts__link {
+		font-size: 30px;
+	}
+}
+.blog {
+	padding: 85px 0;
+	&__title {
+		margin-bottom: 50px;
+	}
+}
+.blog-slider {
+	position: relative;
+	&__buttons {
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		left: 0;
+		z-index: 5;
+		padding: 0 20px;
+		position: absolute;
+	}
+	&__button {
+		display: block;
+		width: fit-content;
+		@include rgbaColor(bac, #fff, 0.1);
+		width: 60px;
+		height: 60px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 3px solid #fff;
+		transition: 0.4s;
+		@include hoverSvg(#c2873f, 0.4s);
+		&:hover {
+			border-color: #c2873f;
+		}
 	}
 }

@@ -71,3 +71,12 @@ $(document).ready(function(){
   }
 });
 
+//slider-blog
+var swiper = new Swiper('.blog-slider__swiper', {
+  slidesPerView: 3,
+  spaceBetween: 41,
+  navigation: {
+    nextEl: '.swiper-blog-next',
+    prevEl: '.swiper-blog-prev',
+  },
+});
