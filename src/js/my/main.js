@@ -26,8 +26,6 @@ allItemsSer?.addEventListener('click', (e)=>{
 //map
 const mapImg = document.querySelector('.map-img')
 
-//mouseover
-//click
 mapImg?.addEventListener('mouseover', (e)=>{
 	const elem = e.target.dataset.piece
 	const element = document.querySelector('[data-text="'+ elem +'"]');
@@ -37,3 +35,39 @@ mapImg?.addEventListener('mouseover', (e)=>{
 	}
 	element.classList.add('active-path-text')
 })
+
+//slider one
+$(document).ready(function(){
+  var slider = $('.triumphs-slider__items');
+
+  slider.slick({
+    // Опції слайдера Slick тут
+    dots: true,
+    prevArrow: $('.triumphs-slider__prev'),
+    nextArrow: $('.triumphs-slider__next'),
+    appendDots: $('.triumphs-slider__sum')
+  });
+
+  var slideCount = slider.slick('getSlick').slideCount;
+  var currentSlide = slider.slick('slickCurrentSlide') + 1;
+
+  updateSlideCount(slideCount, currentSlide);
+
+  slider.on('afterChange', function(event, slick, currentSlide){
+    var currentSlideNumber = currentSlide + 1;
+    updateSlideCount(slideCount, currentSlideNumber);
+  });
+
+  function updateSlideCount(totalSlides, currentSlideNumber) {
+    if (currentSlideNumber) {
+      $('.triumphs-slider__sum').text(formatSlideNumber(currentSlideNumber) + ' / ' + formatSlideNumber(totalSlides));
+    } else {
+      $('.triumphs-slider__sum').text(formatSlideNumber(totalSlides));
+    }
+  }
+
+  function formatSlideNumber(number) {
+    return number.toString();
+  }
+});
+

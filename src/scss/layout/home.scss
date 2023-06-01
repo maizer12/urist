@@ -304,13 +304,13 @@
 	&__img {
 		position: absolute;
 		bottom: 0;
-		left:0;
+		left: 0;
 		height: 97%;
 	}
 	&__content {
 		max-width: 986px;
 		margin-left: auto;
-		padding-top: 30px; 
+		padding-top: 30px;
 	}
 	&__title {
 		margin-bottom: 25px;
@@ -345,7 +345,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding-right: 143px;
-		align-items:flex-end;
+		align-items: flex-end;
 	}
 	&__data-name {
 		color: #fff;
@@ -358,6 +358,145 @@
 		line-height: 1.2;
 		letter-spacing: 0em;
 		text-align: left;
+		color: #fff;
+	}
+}
+.real-triumphs {
+	padding: 85px 0;
+	&__container {
+		display: flex;
+		column-gap: 52px;
+		justify-content: space-between;
+	}
+}
+.triumphs-slider {
+	justify-content: space-between;
+	@include columnGap(0);
+	max-width: 445px;
+	&__footer {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		justify-content: space-between;
+		padding-right: 5px;
+		margin-top: 20px;
+	}
+	&__sum {
+		font-family: Montserrat;
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 1.2;
+		color: #000000;
+		letter-spacing: 0.1em;
+		text-align: left;
+	}
+	&__name {
+		margin-bottom: 20px;
+	}
+	&__text {
+		margin-bottom: 46px;
+		color: #000000;
+	}
+	&__button {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+	&__item {
+		width: 100%;
+		margin-right: 5px;
+	}
+	&__btn {
+		padding: 12px;
+		background: none;
+		border: 3px solid #c2873f;
+		transition: 0.4s;
+		@include hoverSvg(#ffff, 0.4s);
+		&:hover {
+			background-color: #c2873f;
+		}
+	}
+}
+
+.triumphs-items {
+	display: flex;
+	column-gap: 40px;
+	&__images {
+		width: 100%;
+		height: 362px;
+		overflow: hidden;
+		@include blackTop(#000212, 0.4);
+	}
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	&__name {
+		font-family: Montserrat;
+		color: #fff;
+		font-size: 40px;
+		font-weight: 400;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		line-height: 1;
+		letter-spacing: 0em;
+		text-align: left;
+		z-index: 2;
+	}
+	&__btn {
+		background-color: #c2873f;
+		color: #fff;
+		width: 100%;
+		display: block;
+		text-align: center;
+		@include hoverColor(#c2873f);
+		&:hover {
+			background: none;
+		}
+	}
+	&__item {
+		width: 593px;
+	}
+	&__footer {
+		@include blackTop(#000212, 0.4);
+		z-index: 2;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 10px 20px;
+		display: flex;
+		column-gap: 20px;
+		justify-content: space-between;
+	}
+	&__categori {
+		z-index: 2;
 		color:#fff;
+		font-family: Montserrat;
+		font-size: 16px;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+		font-weight: 400;
+		span{
+			color:#C2873F;
+			font-weight: 500;
+		}
+	}
+	&__date {
+		font-family: Montserrat;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 1.2;
+		z-index: 2;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #fff;
+		@include hoverLink(#fff);
+		&:after{
+			width: 100%;
+			bottom: 1px;
+		}
 	}
 }
