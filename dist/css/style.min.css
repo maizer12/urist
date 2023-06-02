@@ -339,8 +339,8 @@ body.lock {
   font-family: Open Sans;
   font-size: 20px;
   font-weight: 400;
-  line-height: 1.3;
-  right: -12px;
+  line-height: 1;
+  right: -15px;
   color: #fff;
   position: absolute;
 }
@@ -642,6 +642,11 @@ body.lock {
   }
   .header-contacts-open .header-contacts {
     transform: translateY(0%);
+  }
+  .menu__list {
+    padding-top: 130px;
+    padding-left: 27px;
+    row-gap: 20px;
   }
 }
 .open {
@@ -1585,6 +1590,16 @@ body.lock {
   .map-img {
     height: fit-content;
   }
+  .triumphs-items {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+  .triumphs-items__item {
+    width: 100%;
+  }
+  .real-triumphs {
+    padding: 70px 0;
+  }
 }
 @media (max-width: 1600px) {
   .banner__content {
@@ -1617,6 +1632,13 @@ body.lock {
   }
   .map__text {
     padding-top: 0;
+  }
+  .triumphs-items__item:last-child {
+    display: none;
+  }
+  .triumphs-items {
+    grid-template-columns: 1fr;
+    max-width: 580px;
   }
 }
 @media (max-width: 1300px) {
@@ -1707,6 +1729,10 @@ body.lock {
     column-gap: 20px;
   }
 }
+.btn-all-adapt {
+  display: none;
+}
+
 @media (max-width: 1024px) or (max-height: 650px) {
   .banner {
     height: 100%;
@@ -1735,6 +1761,30 @@ body.lock {
   }
   .services-detail__accordions {
     height: 295px;
+  }
+  .real-triumphs__container {
+    flex-direction: column;
+    row-gap: 45px;
+    align-items: center;
+  }
+  .triumphs-slider__button {
+    display: none;
+  }
+  .btn-all-adapt {
+    display: block;
+    max-width: 580px;
+    padding: 19px;
+    font-weight: 700;
+  }
+  .triumphs-slider {
+    max-width: 580px;
+    width: 100%;
+  }
+  .triumphs-slider__name {
+    font-size: 32px;
+  }
+  .triumphs-slider__text {
+    margin-bottom: 28px;
   }
 }
 @media (max-width: 880px) {
@@ -1818,6 +1868,12 @@ body.lock {
   .about-me__signature {
     max-width: 60px;
   }
+  .about-me__signature svg {
+    height: fit-content;
+  }
+  .about-me__data {
+    padding-bottom: 10px;
+  }
   .about-me__data-name {
     font-size: 14px;
   }
@@ -1829,6 +1885,9 @@ body.lock {
   }
   .about-me__content {
     width: 54%;
+  }
+  .about-me__footer {
+    margin-top: 20px;
   }
 }
 @media (max-width: 600px) {
@@ -1891,6 +1950,55 @@ body.lock {
   }
   .about-me__name {
     font-size: 14px;
+  }
+  .real-triumphs {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .triumphs-slider__name {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  .triumphs-slider__text {
+    margin-bottom: 30px;
+    font-size: 10px;
+  }
+  .triumphs-slider__btn {
+    border-width: 2px;
+    width: 36px;
+    padding: 0;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .triumphs-slider__btn svg {
+    max-width: 26px;
+  }
+  .triumphs-slider__sum {
+    font-size: 24px;
+  }
+  .real-triumphs__container {
+    row-gap: 30px;
+  }
+  .triumphs-items__images {
+    height: 202px;
+  }
+  .triumphs-items__name {
+    font-size: 24px;
+  }
+  .triumphs-items__date {
+    font-size: 10px;
+  }
+  .triumphs-items__footer {
+    padding: 5px 16px;
+  }
+  .triumphs-items__categori {
+    font-size: 10px;
+  }
+  .triumphs-items__btn {
+    padding: 8px;
+    font-size: 18px;
   }
 }
 @media (max-width: 450px) {
@@ -2013,5 +2121,22 @@ body.lock {
   }
   .about-me__signature {
     max-width: 30px;
+  }
+}
+@media (max-width: 370px) {
+  .about-me__img {
+    position: static;
+    display: block;
+    height: auto;
+    width: 37%;
+    margin-left: 15px;
+    margin-bottom: -15px;
+  }
+  .about-me__container {
+    column-gap: 0px;
+    align-items: flex-end;
+  }
+  .about-me__content {
+    max-width: 100%;
   }
 }
