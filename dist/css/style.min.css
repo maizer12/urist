@@ -1666,6 +1666,9 @@ body.lock {
   .about-me__signature svg {
     width: 100%;
   }
+  .questions {
+    padding: 68px 0;
+  }
 }
 @media (max-width: 1200px) {
   .banner__content {
@@ -1710,6 +1713,19 @@ body.lock {
   .about-me__experience {
     font-size: 16px;
   }
+  .me-numbers {
+    padding-bottom: 60px;
+  }
+  .me-numbers__title {
+    margin-bottom: 45px;
+    font-size: 32px;
+  }
+  .me-numbers__name {
+    font-size: 46px;
+  }
+  .me-numbers__desc {
+    font-size: 18px;
+  }
 }
 @media (max-width: 1150px) {
   .about-me {
@@ -1733,6 +1749,19 @@ body.lock {
   display: none;
 }
 
+@media (max-width: 1204px) {
+  .questions__title {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  .questions__sub-title {
+    font-size: 14px;
+    margin-bottom: 32px;
+  }
+  .questions .header-contacts__link {
+    font-size: 24px;
+  }
+}
 @media (max-width: 1024px) or (max-height: 650px) {
   .banner {
     height: 100%;
@@ -1785,6 +1814,34 @@ body.lock {
   }
   .triumphs-slider__text {
     margin-bottom: 28px;
+  }
+  .me-numbers__items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .me-numbers__item:nth-child(n+4) {
+    border-bottom: 1px solid #C2873F;
+  }
+  .me-numbers__item:nth-child(n+5) {
+    border-bottom: 0;
+  }
+  .me-numbers__item:nth-of-type(2n) {
+    border-right: 0;
+  }
+  .me-numbers__item:nth-child(3) {
+    border-right: 1px solid #C2873F;
+  }
+  .questions {
+    padding: 40px 0;
+  }
+  .questions__title {
+    font-size: 28px;
+  }
+  .questions__footer {
+    row-gap: 18px;
+    flex-direction: column;
+  }
+  .socials {
+    margin-right: 0;
   }
 }
 @media (max-width: 880px) {
@@ -1888,6 +1945,10 @@ body.lock {
   }
   .about-me__footer {
     margin-top: 20px;
+  }
+  .questions__title {
+    font-size: 25px;
+    margin-bottom: 12px;
   }
 }
 @media (max-width: 600px) {
@@ -2121,6 +2182,20 @@ body.lock {
   }
   .about-me__signature {
     max-width: 30px;
+  }
+  .me-numbers__title {
+    font-size: 24px;
+    margin-bottom: 35px;
+  }
+  .me-numbers__name {
+    font-size: 27px;
+    margin-bottom: 7px;
+  }
+  .me-numbers__desc {
+    font-size: 14px;
+  }
+  .me-numbers__item {
+    padding: 16px;
   }
 }
 @media (max-width: 370px) {
