@@ -67,7 +67,7 @@ $(document).ready(function(){
   }
 
   function formatSlideNumber(number) {
-    return number.toString();
+    return number?.toString();
   }
 });
 
@@ -80,3 +80,61 @@ var swiper = new Swiper('.blog-slider__swiper', {
     prevEl: '.swiper-blog-prev',
   },
 });
+//burg
+function switchBody(newClass, also){
+  const body = document.querySelector('body')
+  if(body.classList.contains('open')){
+    body.classList = ''
+    if(also){
+      body.classList.add(newClass)
+      body.classList.add('open')
+    }
+  }else{
+    if(newClass){
+      body.classList.add(newClass)
+      body.classList.add('open')
+    }
+  }
+  
+ 
+}
+function getElem(e, classCheck){
+  const elem = e.target
+  if(elem.classList.contains(classCheck)){
+    return elem
+  }
+}
+const btnBurg = document.querySelector('.icon-menu')
+const menu = document.querySelector('.menu')
+const tellBtn = document.querySelector('.header-tell')
+
+btnBurg?.addEventListener('click', ()=>{
+  switchBody('menu-open')
+})
+
+menu?.addEventListener('click', (e)=>{
+  const elem = getElem(e, 'menu')
+  if(elem){
+    switchBody('menu-open')
+  }
+})
+
+tellBtn.addEventListener('click', ()=>{
+  switchBody('header-contacts-open', true)
+})
+
+//lang
+function handleResize() {
+  var screenWidth = $(window).width();
+
+  if (screenWidth < 590) {
+    var languageElement = $('.language');
+    var menuListElement = $('.menu__list');
+
+    languageElement.detach().appendTo(menuListElement);
+  }
+}
+
+$(window).on('resize', handleResize);
+$(document).ready(handleResize);
+

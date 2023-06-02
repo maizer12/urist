@@ -381,52 +381,269 @@ body.lock {
   width: 100%;
 }
 
-/*
 .icon-menu {
   display: none;
-  @include media(767) {
+  margin-left: 20px;
+  background: none;
+}
+@media (max-width: 1024.98px) {
+  .icon-menu {
     display: block;
     position: relative;
-    width: rem(30);
-    height: rem(18);
+    width: 1.875rem;
+    height: 1.6875rem;
     cursor: pointer;
     z-index: 5;
-    span,
-    &::before,
-    &::after {
-      content: "";
-      transition: all 300ms ease 0ms;
-      right: 0;
-      position: absolute;
-      width: 100%;
-      height: rem(2);
-      background-color: #000;
-    }
-    &::before {
-      top: 0;
-    }
-    &::after {
-      bottom: 0;
-    }
-    span {
-      top: calc(50% - rem(1));
-    }
-    .menu-open & {
-      span {
-        width: 0;
-      }
-      &::before {
-        top: calc(50% - rem(1));
-        transform: rotate(-45deg);
-      }
-      &::after {
-        bottom: calc(50% - rem(1));
-        transform: rotate(45deg);
-      }
-    }
+  }
+  .icon-menu span, .icon-menu::before, .icon-menu::after {
+    content: "";
+    transition: all 300ms ease 0ms;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 0.3125rem;
+    background-color: #ffffff;
+  }
+  .icon-menu::before {
+    top: 0;
+  }
+  .icon-menu::after {
+    bottom: 0;
+  }
+  .icon-menu span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .open .icon-menu span, .open .icon-menu::before, .open .icon-menu::after {
+    content: "";
+    background-color: #C2873F;
+  }
+  .open .icon-menu span {
+    width: 0;
+  }
+  .open .icon-menu::before {
+    transform: translateY(-50%) rotate(-45deg);
+    top: 50%;
+  }
+  .open .icon-menu::after {
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
   }
 }
-*/
+
+@media (max-width: 1652px) {
+  .header__logo {
+    max-width: 178px;
+  }
+  .header__logo img {
+    width: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  .menu__list {
+    column-gap: 60px;
+  }
+  .menu__link {
+    font-size: 16px;
+  }
+  .header .socials {
+    margin-right: 68px;
+    column-gap: 32px;
+  }
+  .header-contacts__link, .language__item {
+    font-size: 18px;
+  }
+  .language__item span {
+    right: -40%;
+    transform: translateX(50%);
+  }
+  .language {
+    margin-right: 47px;
+  }
+}
+@media (max-width: 1290px) {
+  .menu__list {
+    column-gap: 30px;
+  }
+  .header .socials {
+    column-gap: 15px;
+    margin-right: 34px;
+  }
+  .header-contacts__link, .language__item {
+    font-size: 16px;
+  }
+  .language__item span {
+    top: -4px;
+    right: -45%;
+  }
+  .language {
+    margin-right: 27px;
+  }
+}
+@media (max-width: 1024px) {
+  .menu {
+    transform: translateX(110%);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: 0.6s;
+  }
+  .menu__list {
+    background-image: url("../../images/banner/adapt-bg-home.jpg");
+    background-size: cover;
+    position: relative;
+    display: block;
+    width: 40%;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 50px;
+    padding-top: 100px;
+    margin-left: auto;
+    transition: 0.6s;
+    transform: translateX(100%);
+    transition-delay: 0.4s;
+  }
+  .menu__list:after {
+    content: "";
+    background-color: rgba(0, 2, 18, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .menu__list::after {
+    opacity: 0.7;
+  }
+  .menu__link {
+    font-size: 28px;
+    position: relative;
+    z-index: 2;
+  }
+  .menu-open .menu {
+    transform: translate(0);
+  }
+  .menu-open .menu__list {
+    transform: translate(0);
+  }
+}
+@media (max-width: 840.98px) {
+  .header .socials {
+    display: none;
+  }
+  .menu__list {
+    width: 60%;
+  }
+}
+@media (max-width: 590.98px) {
+  .menu__list {
+    width: 100%;
+  }
+  .header {
+    border-bottom: 0;
+  }
+  .header::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    border: 1px solid;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .header__logo {
+    position: relative;
+    z-index: 3;
+    max-width: 185px;
+  }
+  .header {
+    padding: 23px 0;
+  }
+  .menu__list {
+    padding-top: 145px;
+  }
+  .menu__link {
+    font-size: 30px;
+  }
+  .language {
+    position: absolute;
+    right: 10px;
+    bottom: 13px;
+    z-index: 2;
+  }
+  .language__item {
+    font-size: 20px;
+  }
+  .language__item span {
+    top: -1px;
+    right: -40%;
+  }
+}
+.header-tell {
+  position: relative;
+  z-index: 2;
+  background: none;
+  display: none;
+}
+
+@media (max-width: 450.98px) {
+  .header-contacts {
+    background-image: url(../../images/banner/adapt-bg-home.jpg);
+    background-size: cover;
+    position: relative;
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 0 15px;
+    padding-bottom: 20px;
+    padding-top: 110px;
+    border-bottom: 1px solid;
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  .header-contacts:after {
+    content: "";
+    background-color: rgba(0, 2, 18, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .header-contacts:after {
+    opacity: 0.7;
+  }
+  .header-contacts__item {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+  }
+  .header-contacts__item:last-child {
+    padding-bottom: 0;
+  }
+  .header-contacts__link {
+    font-size: 21px;
+  }
+  .header-tell {
+    display: block;
+    margin-top: 6px;
+  }
+  .header-contacts {
+    transform: translateY(-100%);
+    transition: 0.6s;
+  }
+  .header-contacts-open .header-contacts {
+    transform: translateY(0%);
+  }
+}
 .footer__top {
   padding-top: 43px;
   padding-bottom: 62px;
@@ -1419,6 +1636,7 @@ body.lock {
     max-width: 100%;
   }
   .banner {
+    padding-top: 135px;
     padding-bottom: 100px;
   }
 }
@@ -1459,6 +1677,7 @@ body.lock {
 @media (max-width: 450px) {
   .banner {
     background-image: url("../../images/banner/adapt-bg-home.jpg");
+    background-size: cover;
   }
   .banner::before {
     opacity: 0.7;
