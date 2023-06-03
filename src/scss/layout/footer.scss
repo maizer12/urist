@@ -141,3 +141,159 @@
 		@include hoverLink($hoverColor);
 	}
 }
+@include media(1300) {
+	.footer-logo__img {
+		max-width: 100%;
+	}
+	.footer-column {
+		max-width: 220px;
+		&__address {
+			margin-top: 28px;
+			margin-bottom: 22px;
+			font-size: 14px;
+		}
+	}
+	.footer-column__button {
+		padding: 14px;
+	}
+	.footer__container {
+		column-gap: 20px;
+	}
+	.footer-list {
+		&__name {
+			font-size: 20px;
+		}
+		&__items {
+			margin-top: 25px;
+		}
+		&__link {
+			font-size: 14px;
+		}
+	}
+	.footer-socials {
+		max-width: 160px;
+		&__items {
+			column-gap: 17px;
+			row-gap: 20px;
+		}
+	}
+}
+@include media(1024) {
+	.footer__top {
+		.footer__container {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			row-gap: 60px;
+			align-items: center;
+			justify-items: center;
+		}
+	}
+}
+@include media(780) {
+	.footer__top {
+		.footer__container {
+			row-gap: 30px;
+			grid-template-columns: 1fr;
+		}
+	}
+	.footer__bottom {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	.footer-socials {
+		display: none;
+	}
+	.footer-column {
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		&__button {
+			max-width: 200px;
+		}
+		&__address {
+			margin-bottom: 0;
+		}
+	}
+
+	.footer__top {
+		padding-bottom: 40px;
+	}
+	.footer-list {
+		max-width: 100%;
+		width: 100%;
+		&__name {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+		&_df {
+			display: flex;
+			justify-content: space-between;
+			align-items: end;
+		}
+		&_oh {
+			.footer-list__items {
+				display: flex;
+				width: 100%;
+				column-gap: 40px;
+			}
+			.footer-list__item {
+				padding-bottom: 0;
+			}
+		}
+		.socials {
+			margin-top: 0;
+		}
+	}
+}
+@include media(540) {
+	.footer-list {
+		&_none {
+			.footer-list__item:nth-child(n + 4) {
+				display: none;
+			}
+		}
+	}
+	.footer__top {
+		padding-bottom: 16px;
+	}
+	.footer-column__content {
+		max-width: 55%;
+	}
+	.footer-column__address {
+		font-size: 10px;
+	}
+	.footer-column {
+		column-gap: 16px;
+	}
+}
+@include media(480) {
+	.footer-column__button {
+		max-width: 41%;
+		padding: 7px;
+		padding-left: 0;
+		padding-right: 0;
+		font-size: 16px;
+	}
+	.footer-list_oh {
+		.footer-list__items {
+			overflow: auto;
+		}
+	}
+	.footer-list_oh .footer-list__item {
+		width: max-content;
+	}
+	.footer__text,
+	.footer__copy {
+		font-size: 12px;
+	}
+	.footer-list_df {
+		.socials {
+			column-gap: 15px;
+		}
+		.socials__link {
+			width: 36px;
+		}
+	}
+}

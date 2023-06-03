@@ -81,7 +81,6 @@ var swiper = new Swiper('.blog-slider__swiper', {
 		prevEl: '.swiper-blog-prev',
 	},
 	breakpoints: {
-		// Опции для разных брейкпоинтов
 		320: {
 			slidesPerView: 1,
 			spaceBetween: 20,
@@ -103,7 +102,23 @@ var swiper = new Swiper('.blog-slider__swiper', {
 			spaceBetween: 41,
 		},
 	},
+	on: {
+		init: function () {
+			updateSlideInfo.call(this)
+		},
+		slideChange: function () {
+			updateSlideInfo.call(this)
+		},
+	},
 })
+
+function updateSlideInfo() {
+	var activeSlideIndex = this.activeIndex + 1 // Индекс текущего слайда (начиная с 0)
+	var totalSlides = this.slides.length // Общее количество слайдов
+	var numbersElement = document.querySelector('.blog-slider__numbers')
+	numbersElement.textContent = activeSlideIndex + '/' + totalSlides
+}
+
 //burg
 function switchBody(newClass, also) {
 	const body = document.querySelector('body')
