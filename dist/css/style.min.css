@@ -219,9 +219,9 @@ body.lock {
   padding: 16px 22px;
   border: 2px solid #C2873F;
   color: #C2873F;
-  font-family: Open Sans;
+  font-family: Montserrat;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 25px;
   letter-spacing: 0em;
   transition: 0.6s;
@@ -416,7 +416,7 @@ body.lock {
   }
   .open .icon-menu span, .open .icon-menu::before, .open .icon-menu::after {
     content: "";
-    background-color: #C2873F;
+    background-color: #c2873f;
   }
   .open .icon-menu span {
     width: 0;
@@ -450,7 +450,8 @@ body.lock {
     margin-right: 68px;
     column-gap: 32px;
   }
-  .header-contacts__link, .language__item {
+  .header-contacts__link,
+  .language__item {
     font-size: 18px;
   }
   .language__item span {
@@ -469,7 +470,8 @@ body.lock {
     column-gap: 15px;
     margin-right: 34px;
   }
-  .header-contacts__link, .language__item {
+  .header-contacts__link,
+  .language__item {
     font-size: 16px;
   }
   .language__item span {
@@ -594,7 +596,7 @@ body.lock {
 }
 
 @media (max-width: 450.98px) {
-  .header-contacts {
+  .header .header-contacts {
     background-image: url(../../images/banner/adapt-bg-home.jpg);
     background-size: cover;
     position: relative;
@@ -609,7 +611,7 @@ body.lock {
     border-bottom: 1px solid;
     border-color: rgba(255, 255, 255, 0.2);
   }
-  .header-contacts:after {
+  .header .header-contacts:after {
     content: "";
     background-color: rgba(0, 2, 18, 0.9);
     position: absolute;
@@ -618,25 +620,25 @@ body.lock {
     width: 100%;
     height: 100%;
   }
-  .header-contacts:after {
+  .header .header-contacts:after {
     opacity: 0.7;
   }
-  .header-contacts__item {
+  .header .header-contacts__item {
     position: relative;
     z-index: 2;
     padding-bottom: 20px;
   }
-  .header-contacts__item:last-child {
+  .header .header-contacts__item:last-child {
     padding-bottom: 0;
   }
-  .header-contacts__link {
+  .header .header-contacts__link {
     font-size: 21px;
   }
-  .header-tell {
+  .header .header-tell {
     display: block;
     margin-top: 6px;
   }
-  .header-contacts {
+  .header .header-contacts {
     transform: translateY(-100%);
     transition: 0.6s;
   }
@@ -1513,6 +1515,9 @@ body.lock {
 .blog__title {
   margin-bottom: 50px;
 }
+.blog__container {
+  overflow: hidden;
+}
 
 .blog-slider {
   position: relative;
@@ -1610,6 +1615,18 @@ body.lock {
     padding-right: 15px;
   }
 }
+@media (max-width: 1500px) {
+  .blog {
+    padding: 65px 0;
+  }
+  .blog__title {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  .blog .triumphs-items__images {
+    height: 290px;
+  }
+}
 @media (max-width: 1400px) {
   .services__items {
     display: grid;
@@ -1633,12 +1650,21 @@ body.lock {
   .map__text {
     padding-top: 0;
   }
-  .triumphs-items__item:last-child {
+  .triumphs-items .triumphs-items__item:last-child {
     display: none;
   }
   .triumphs-items {
     grid-template-columns: 1fr;
     max-width: 580px;
+  }
+  .blog {
+    padding: 60px 0;
+  }
+  .blog .triumphs-items__name {
+    font-size: 32px;
+  }
+  .blog .triumphs-items__images {
+    height: 250px;
   }
 }
 @media (max-width: 1300px) {
@@ -1843,6 +1869,9 @@ body.lock {
   .socials {
     margin-right: 0;
   }
+  .blog {
+    padding: 50px 0;
+  }
 }
 @media (max-width: 880px) {
   .services__items {
@@ -1891,6 +1920,29 @@ body.lock {
   }
   .about-me__footer {
     margin-top: 0;
+  }
+  .blog .triumphs-items__name {
+    font-size: 24px;
+  }
+  .blog .triumphs-items__images {
+    height: 202px;
+  }
+  .blog .triumphs-items__footer {
+    padding: 5px 16px;
+  }
+  .blog .blog-slider__button {
+    width: 36px;
+    height: 36px;
+  }
+  .blog .blog-slider__button svg {
+    width: 26px;
+  }
+  .blog .triumphs-items__btn {
+    padding: 8px;
+    font-size: 18px;
+  }
+  .blog .triumphs-items__categori {
+    font-size: 10px;
   }
 }
 @media (max-width: 710px) {
@@ -1949,6 +2001,63 @@ body.lock {
   .questions__title {
     font-size: 25px;
     margin-bottom: 12px;
+  }
+  .questions {
+    padding: 54px 0;
+    background-image: url(../../images/bg-qe-adapt.jpg);
+    background-size: cover;
+  }
+  .questions .header-contacts {
+    padding-left: 90px;
+    position: relative;
+  }
+  .questions .header-contacts::after {
+    content: "";
+    width: 48px;
+    height: 46px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-size: cover;
+    background-image: url(../../images/tell-adapt.svg);
+  }
+  .questions__sub-title {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 670px) {
+  .blog__title {
+    margin-bottom: 50px;
+  }
+  .blog .blog-slider {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog .blog-slider__buttons {
+    position: static;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  .blog .blog-slider__button {
+    border-color: #c2873f;
+    border-width: 2px;
+  }
+  .blog .blog-slider__button svg path {
+    fill: #C2873F;
+  }
+  .blog .blog-slider__swiper {
+    max-width: 360px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    order: 2;
+  }
+  .blog .blog-slider__button {
+    width: 46px;
+    height: 46px;
+  }
+  .blog .blog-slider__button svg {
+    width: 34px;
   }
 }
 @media (max-width: 600px) {
@@ -2061,6 +2170,17 @@ body.lock {
     padding: 8px;
     font-size: 18px;
   }
+  .blog__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .blog .blog-slider__button {
+    width: 36px;
+    height: 36px;
+  }
+  .blog .blog-slider__button svg {
+    width: 26px;
+  }
 }
 @media (max-width: 450px) {
   .banner {
@@ -2124,7 +2244,8 @@ body.lock {
   .services-item__images {
     height: 200px;
   }
-  .services-detail__accordions, .services-detail__header {
+  .services-detail__accordions,
+  .services-detail__header {
     padding-left: 15px;
   }
   .services-detail__name {
@@ -2196,6 +2317,36 @@ body.lock {
   }
   .me-numbers__item {
     padding: 16px;
+  }
+  .questions {
+    padding: 30px 0;
+  }
+  .questions__title {
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+  .questions__sub-title {
+    font-size: 10px;
+  }
+  .questions .header-contacts__item {
+    font-size: 24px;
+  }
+  .questions__footer {
+    row-gap: 30px;
+  }
+  .questions .socials__link svg {
+    width: 42px;
+    height: 42px;
+  }
+  .questions__btn {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+  .questions .socials {
+    width: 100%;
+    justify-content: space-between;
   }
 }
 @media (max-width: 370px) {
