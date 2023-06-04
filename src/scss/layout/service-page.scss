@@ -1,0 +1,172 @@
+.banner-list-services {
+	margin-top: 40px;
+	.banner-list__item {
+		padding-left: 0;
+		line-height: 1.5;
+		&:before {
+			display: none;
+		}
+	}
+}
+.banner-services {
+	background-image: url('../../images/banner/bg-2.jpg');
+	&::before {
+		display: none;
+	}
+}
+.prices {
+	padding: 85px 0;
+	&__title {
+		margin-bottom: 50px;
+	}
+
+	&__container {
+	}
+}
+.prices-list {
+	background-image: url('../../images/bg-price.jpg');
+	padding-bottom: 48px;
+	position: relative;
+	&::after {
+		content: '';
+		width: 1px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		@include rgbaColor(bac, #fff, 0.5);
+	}
+	&__header {
+		background-color: black;
+		border-bottom: 1px solid;
+		@include rgbaColor(bor, #fff, 0.5);
+		margin-bottom: 10px;
+	}
+
+	&__container {
+		display: flex;
+	}
+
+	&__name {
+		max-width: 50%;
+		width: 100%;
+		padding: 19px;
+		padding-bottom: 7px;
+		padding-top: 13px;
+		font-family: Montserrat;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 33px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #fff;
+	}
+
+	&__item {
+		border-bottom: 1px solid;
+		@include rgbaColor(bor, #fff, 0.5);
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	&__text {
+		max-width: 50%;
+		width: 100%;
+		padding: 19px;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		font-family: Montserrat;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.4;
+		color: #fff;
+		letter-spacing: 0em;
+		text-align: left;
+		span {
+			color: #fff;
+		}
+	}
+}
+@media (max-width: 980px) {
+	.prices {
+		padding: 65px 0;
+		&__title {
+			margin-bottom: 40px;
+		}
+		&__container {
+		}
+	}
+	.prices-list {
+		&__header {
+		}
+
+		&__container {
+		}
+
+		&__name {
+		}
+
+		&__item {
+		}
+
+		&__text {
+			span {
+				display: none;
+			}
+		}
+	}
+}
+.pc-name {
+	color: #fff;
+}
+.adapt-name {
+	display: none;
+	color: #fff;
+}
+@media (max-width: 780px) {
+	.prices {
+		padding: 55px 0;
+		&__title {
+			margin-bottom: 30px;
+			font-size: 34px;
+		}
+	}
+	.prices-list {
+		padding-bottom: 20px;
+		&__header {
+			margin-bottom: 5px;
+		}
+
+		&__container {
+		}
+		.adapt-name {
+			display: block;
+		}
+		.pc-name {
+			display: none;
+		}
+		&__item {
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+	}
+}
+@media (max-width: 580px) {
+	.banner-services {
+		.banner-list__item {
+			padding-left: 28px;
+			&:before {
+				display: block;
+				opacity: 0.7;
+			}
+		}
+		background-image: url(../../images/banner/adapt-bg-home.jpg);
+		&::before {
+			display: block;
+		}
+	}
+}
