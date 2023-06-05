@@ -3,15 +3,6 @@
 	padding-top: 100px;
 	background-image: url('../../images/banner/bg.jpg');
 	position: relative;
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		@include rgbaColor(bac, #000212e5, 0.9);
-	}
 	&__container {
 		display: flex;
 		align-items: center;
