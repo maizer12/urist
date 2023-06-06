@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 $(function () {
 	$('.services-accordion').accordion({
 		collapsible: true,
@@ -144,6 +145,9 @@ function getElem(e, classCheck) {
 const btnBurg = document.querySelector('.icon-menu')
 const menu = document.querySelector('.menu')
 const tellBtn = document.querySelector('.header-tell')
+const closePopup = document.querySelector('.popup__close')
+const openPopup = document.querySelector('.banner__btn')
+const popupHome = document.querySelector('.popup')
 
 btnBurg?.addEventListener('click', () => {
 	switchBody('menu-open')
@@ -159,7 +163,17 @@ menu?.addEventListener('click', e => {
 tellBtn.addEventListener('click', () => {
 	switchBody('header-contacts-open', true)
 })
-
+openPopup?.addEventListener('click', () => {
+	body.classList.toggle('popup-open')
+})
+popupHome?.addEventListener('click', (e) => {
+	if(getElem(e, 'popup')){
+		body.classList.toggle('popup-open')
+	}
+})
+closePopup?.addEventListener('click', () => {
+	body.classList.toggle('popup-open')
+})
 //lang
 function handleResize() {
 	var screenWidth = $(window).width()
@@ -174,3 +188,22 @@ function handleResize() {
 
 $(window).on('resize', handleResize)
 $(document).ready(handleResize)
+//select
+var phoInput = document.querySelector("#phone");
+var phoNum = window.intlTelInput(phoInput, {
+  hiddenInput: "full",
+  placeholderNumberType: "MOBILE",
+  preferredCountries: ["ua", "sa", "eg", "ae", "us"],
+  separateDialCode: true,
+  showFlags: true,
+  utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+});
+
+$("form").submit(function() {
+  var full_number = phoNum.getNumber(intlTelInputUtils.numberFormat.E164);
+  $("input[name='page_contact_phone[full]'").val(full_number);
+  alert(full_number);
+});
+
+
+
