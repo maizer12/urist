@@ -35,45 +35,51 @@ mapImg?.addEventListener('mouseover', e => {
 	}
 	element.classList.add('active-path-text')
 })
-
-//slider one
-$(document).ready(function () {
-	var slider = $('.triumphs-slider__items')
-
-	slider.slick({
-		// Опції слайдера Slick тут
-		dots: true,
-		prevArrow: $('.triumphs-slider__prev'),
-		nextArrow: $('.triumphs-slider__next'),
-		appendDots: $('.triumphs-slider__sum'),
-	})
-
-	var slideCount = slider.slick('getSlick').slideCount
-	var currentSlide = slider.slick('slickCurrentSlide') + 1
-
-	updateSlideCount(slideCount, currentSlide)
-
-	slider.on('afterChange', function (event, slick, currentSlide) {
-		var currentSlideNumber = currentSlide + 1
-		updateSlideCount(slideCount, currentSlideNumber)
-	})
-
-	function updateSlideCount(totalSlides, currentSlideNumber) {
-		if (currentSlideNumber) {
-			$('.triumphs-slider__sum').text(
-				formatSlideNumber(currentSlideNumber) +
-					' / ' +
-					formatSlideNumber(totalSlides)
-			)
-		} else {
-			$('.triumphs-slider__sum').text(formatSlideNumber(totalSlides))
-		}
+//slice
+function updateSliderInfoAndSum(swiper) {
+	var totalSlides = swiper.slides.length - 1; 
+	var activeSlideIndex = swiper.activeIndex + 1; 
+	var sliderInfo = "" + activeSlideIndex + "/" + totalSlides; 
+	var sliderSumElement = document.querySelector('.triumphs-slider__sum');
+	if (sliderSumElement) {
+			sliderSumElement.textContent = sliderInfo; 
 	}
+}
 
-	function formatSlideNumber(number) {
-		return number?.toString()
-	}
-})
+var newSwipe = new Swiper('.triumphs-items-swiper', {
+	navigation: {
+			nextEl: '.triumphs-slider__next',
+			prevEl: '.triumphs-slider__prev',
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+			spaceBetween: 20,
+		},
+		670: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		750: {
+			slidesPerView: 2,
+			spaceBetween: 60,
+		},
+		980: {
+			slidesPerView: 1,
+			spaceBetween: 101,
+		},
+		1500: {
+			slidesPerView: 2,
+			spaceBetween: 40,
+		},
+	},
+});
+
+newSwipe.on('slideChange', function () {
+	updateSliderInfoAndSum(newSwipe); // Оновлюємо інформацію про активний слайд при зміні слайда
+});
+
+updateSliderInfoAndSum(newSwipe); // Викликаємо функцію для почат
 
 //slider-blog
 var swiper = new Swiper('.blog-slider__swiper', {
@@ -146,8 +152,18 @@ const btnBurg = document.querySelector('.icon-menu')
 const menu = document.querySelector('.menu')
 const tellBtn = document.querySelector('.header-tell')
 const closePopup = document.querySelector('.popup__close')
-const openPopup = document.querySelector('.banner__btn')
+const openPopup = document.querySelectorAll('.open-form-all')
 const popupHome = document.querySelector('.popup')
+
+
+openPopup?.forEach(e =>{
+	e.addEventListener('click', () => {
+		console.log(13)
+		body.classList.toggle('popup-open')
+	})
+})
+
+
 
 btnBurg?.addEventListener('click', () => {
 	switchBody('menu-open')
@@ -163,9 +179,7 @@ menu?.addEventListener('click', e => {
 tellBtn.addEventListener('click', () => {
 	switchBody('header-contacts-open', true)
 })
-openPopup?.addEventListener('click', () => {
-	body.classList.toggle('popup-open')
-})
+
 popupHome?.addEventListener('click', (e) => {
 	if(getElem(e, 'popup')){
 		body.classList.toggle('popup-open')

@@ -364,8 +364,9 @@
 	}
 }
 .triumphs-slider {
+	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
-	@include columnGap(0);
 	max-width: 445px;
 	&__footer {
 		display: flex;
@@ -388,6 +389,7 @@
 		margin-bottom: 20px;
 	}
 	&__text {
+		line-height: 1.5;
 		margin-bottom: 46px;
 		color: #000000;
 	}
@@ -401,7 +403,8 @@
 		margin-right: 5px;
 	}
 	&__btn {
-		padding: 12px;
+		width: 60px;
+		height: 60px;
 		background: none;
 		border: 3px solid #c2873f;
 		transition: 0.4s;
@@ -411,10 +414,12 @@
 		}
 	}
 }
-
+.triumphs-items-swiper{
+	overflow: hidden;
+}
 .triumphs-items {
 	display: flex;
-	column-gap: 40px;
+	max-width: 1200px;
 	&__images {
 		width: 100%;
 		height: 362px;
@@ -451,7 +456,8 @@
 		}
 	}
 	&__item {
-		width: 593px;
+		width: 100%;
+		//max-width: 600px;
 	}
 	&__footer {
 		@include blackTop(#000212, 0.4);
@@ -652,13 +658,14 @@
 		max-width: 58%;
 	}
 }
+@media (max-width: 1500px) {
+	.triumphs-items-swiper{
+		max-width: 600px;
+	}
+}
 @media (max-width: 1800px) {
 	.map-img {
 		height: fit-content;
-	}
-	.triumphs-items {
-		grid-template-columns: 1fr 1fr;
-		display: grid;
 	}
 	.triumphs-items__item {
 		width: 100%;
@@ -717,10 +724,6 @@
 				display: none;
 			}
 		}
-	}
-	.triumphs-items {
-		grid-template-columns: 1fr;
-		max-width: 580px;
 	}
 	.blog {
 		padding: 60px 0;
@@ -848,7 +851,7 @@
 		font-size: 24px;
 	}
 }
-@media (max-width: 1024px) or (max-height: 650px) {
+@media (max-width: 1100px) or (max-height: 650px) {
 	.banner {
 		height: 100%;
 	}
@@ -888,9 +891,9 @@
 	}
 	.btn-all-adapt {
 		display: block;
+		font-size: 18px;
 		max-width: 580px;
 		padding: 19px;
-		font-weight: 700;
 	}
 	.triumphs-slider {
 		max-width: 580px;
@@ -1156,6 +1159,11 @@
 		}
 	}
 }
+@media (max-width: 630px) {
+	.triumphs-items-swiper{
+		width: 100%;
+	} 
+}
 @media (max-width: 600px) {
 	.banner__content {
 		max-width: 100%;
@@ -1211,13 +1219,7 @@
 		margin-top: 20px;
 	}
 	.about-me__content {
-		max-width: 57%;
-	}
-	.about-me__item {
-		font-size: 8px;
-	}
-	.about-me__name {
-		font-size: 14px;
+		max-width: 60%;
 	}
 	.real-triumphs {
 		padding-top: 50px;
@@ -1290,9 +1292,34 @@
 		padding: 17px;
 		margin-top: 30px;
 	}
+	.about-me__footer{
+		padding-left: 20px;
+	}
 }
-
+.adapt-text-here{
+	display: none;
+}
 @media (max-width: 450px) {
+	.about-me__item{
+		font-size:0;
+	}
+	.questions__btn{
+		order: 2;
+	}
+	.questions .socials{
+		order: 3;
+	}
+	.header-contacts{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.adapt-text-here{
+		display: block;
+		color:#fff;
+		font-size: 10px;
+	}
 	.banner {
 		background-image: url('../../images/banner/adapt-bg-home.jpg');
 		background-size: cover;
@@ -1460,22 +1487,42 @@
 			justify-content: space-between;
 		}
 	}
+	.about-me__list {
+		max-width: 180px;
+		overflow: hidden;
+		margin-left: auto;
+		padding-left: 0;
+		margin-right: -8px;
+	}
+}
+@media (max-width: 415px) {
+	.about-me__img {
+		height: 95%;
+		position: absolute;
+	}
+	.about-me__content{
+		max-width: 100%;
+		width: 225px;
+		margin-left: auto;
+		height: fit-content;
+		padding-top: 0; 
+	}
 }
 @media (max-width: 370px) {
-	.about-me__img {
-		position: static;
-		display: block;
-		height: auto;
-		width: 37%;
-		margin-left: 15px;
-		margin-bottom: -15px;
+	
+	.about-me__img{
+		height: 92%;
+	}
+	.about-me__footer{
+		column-gap:0px;
+		padding-left: 20px;
 	}
 	.about-me__container {
 		column-gap: 0px;
 		align-items: flex-end;
 	}
-	.about-me__content {
-		max-width: 100%;
+	.adapt-text-here{
+		white-space: pre;
 	}
 }
 //selector
@@ -1735,10 +1782,11 @@
 		width: fit-content;
 		height: fit-content;
 		top: 12px;
-		right: 12px;
+		right: 10px;
 	}
 	.popup__close svg {
 		width: 24px;
+		height: auto;
 	}
 	.popup__inner {
 		padding: 45px 33px 20px;
@@ -1863,11 +1911,18 @@
 		padding-right: 15px;
 	}
 }
-@media (max-width: 370px) {
-	.about-me__img {
-		width: 96%;
+@media (max-width: 350px) {
+	.about-me__list {
+		padding-left: 8px;
 	}
-	.about-me__content {
-		width: 248%;
+}
+@media (min-height:1024px){
+	.banner{
+		height: 100%;
+
 	}
+	.banner__container{
+		padding: 200px 15px;
+	}
+	
 }

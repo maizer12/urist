@@ -313,6 +313,9 @@
 	background: none;
 	display: none;
 }
+address{
+	font-style: normal;
+}
 @include media(450) {
 	.header {
 		.header-contacts {
@@ -343,6 +346,9 @@
 		.header-tell {
 			display: block;
 			margin-top: 6px;
+		}
+		.icon-menu{
+			margin-left: 45px;
 		}
 		.header-contacts {
 			transform: translateY(-100%);
