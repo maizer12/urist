@@ -676,6 +676,10 @@ address {
   overflow: hidden;
 }
 
+.num-styles {
+  font-family: "Montserrat", sans-serif;
+}
+
 .footer__top {
   padding-top: 43px;
   padding-bottom: 62px;
@@ -1074,6 +1078,7 @@ address {
   color: #fff;
   padding-left: 26px;
   position: relative;
+  line-height: 1.5;
 }
 .banner-list__item::before {
   content: "";
@@ -1529,7 +1534,7 @@ address {
 .triumphs-items__footer {
   position: relative;
   display: block;
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -1548,7 +1553,7 @@ address {
   height: 100%;
 }
 .triumphs-items__categori {
-  z-index: 2;
+  z-index: 1;
   color: #fff;
   font-family: Montserrat;
   font-size: 16px;

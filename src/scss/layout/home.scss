@@ -58,6 +58,7 @@
 		color: #fff;
 		padding-left: 26px;
 		position: relative;
+		line-height: 1.5; 
 		&::before {
 			content: '';
 			width: 3px;
@@ -461,7 +462,7 @@
 	}
 	&__footer {
 		@include blackTop(#000212, 0.4);
-		z-index: 2;
+		z-index: 1;
 		position: absolute;
 		bottom: 0;
 		width: 100%;
@@ -471,7 +472,7 @@
 		justify-content: space-between;
 	}
 	&__categori {
-		z-index: 2;
+		z-index: 1;
 		color: #fff;
 		font-family: Montserrat;
 		font-size: 16px;
