@@ -25,16 +25,16 @@
 .button {
 	padding: 16px 22px;
 	border: 2px solid $hoverColor;
-	color:$hoverColor;
-	font-family: Montserrat;
+	color: $hoverColor;
+	font-family: Days One;
 	font-size: 20px;
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 25px;
 	letter-spacing: 0em;
 	transition: 0.6s;
-	background:none;
-	&:hover{
-		background-color:$hoverColor;
-		color:#fff;
+	background: none;
+	&:hover {
+		background-color: $hoverColor;
+		color: #fff;
 	}
 }

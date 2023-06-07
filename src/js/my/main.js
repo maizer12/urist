@@ -190,20 +190,23 @@ $(window).on('resize', handleResize)
 $(document).ready(handleResize)
 //select
 var phoInput = document.querySelector("#phone");
-var phoNum = window.intlTelInput(phoInput, {
-  hiddenInput: "full",
-  placeholderNumberType: "MOBILE",
-  preferredCountries: ["ua", "sa", "eg", "ae", "us"],
-  separateDialCode: true,
-  showFlags: true,
-  utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
-});
+if(phoInput){
+	var phoNum = window.intlTelInput(phoInput, {
+		hiddenInput: "full",
+		placeholderNumberType: "MOBILE",
+		preferredCountries: ["ua", "sa", "eg", "ae", "us"],
+		separateDialCode: true,
+		showFlags: true,
+		utilsScript: "//cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.3/js/utils.js"
+	});
+	
+	$("form").submit(function() {
+		var full_number = phoNum.getNumber(intlTelInputUtils.numberFormat.E164);
+		$("input[name='page_contact_phone[full]'").val(full_number);
+		alert(full_number);
+	});
+}
 
-$("form").submit(function() {
-  var full_number = phoNum.getNumber(intlTelInputUtils.numberFormat.E164);
-  $("input[name='page_contact_phone[full]'").val(full_number);
-  alert(full_number);
-});
 
 
 
