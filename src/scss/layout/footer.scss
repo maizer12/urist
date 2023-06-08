@@ -317,4 +317,14 @@
 			height: 36px;
 		}
 	}
+	.footer-list__item{
+		padding-bottom: 10px;
+	}
+	.footer-list__content{
+		.footer-list__item{
+			&:nth-child(2){
+				padding-bottom: 2px; 
+			}
+		}
+	}
 }

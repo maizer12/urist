@@ -680,6 +680,19 @@ address {
   font-family: "Montserrat", sans-serif;
 }
 
+@media (max-width: 760px) {
+  .menu__link:hover {
+    color: #fff;
+  }
+  .menu__link:hover:after {
+    width: 0;
+  }
+}
+@media (max-width: 420px) {
+  .open .icon-menu span, .open .icon-menu::before, .open .icon-menu::after {
+    height: 3.5px;
+  }
+}
 .footer__top {
   padding-top: 43px;
   padding-bottom: 62px;
@@ -1015,6 +1028,12 @@ address {
     width: 36px;
     height: 36px;
   }
+  .footer-list__item {
+    padding-bottom: 10px;
+  }
+  .footer-list__content .footer-list__item:nth-child(2) {
+    padding-bottom: 2px;
+  }
 }
 .banner {
   height: 100vh;
@@ -1059,6 +1078,7 @@ address {
   position: absolute;
   bottom: 0px;
   right: 0;
+  height: 98.6%;
 }
 
 .banner-list {
@@ -1435,7 +1455,7 @@ address {
   margin-bottom: 20px;
 }
 .triumphs-slider__text {
-  line-height: 1.5;
+  line-height: 1.45;
   margin-bottom: 46px;
   color: #000000;
 }
@@ -1709,8 +1729,10 @@ address {
   z-index: 5;
   padding: 0 20px;
   position: absolute;
+  pointer-events: none;
 }
 .blog-slider__button {
+  pointer-events: auto;
   display: block;
   width: fit-content;
   background-color: rgba(255, 255, 255, 0.1);
@@ -1765,7 +1787,7 @@ address {
     font-size: 18px;
   }
   .banner__img {
-    max-width: 58%;
+    max-width: auto;
   }
 }
 @media (max-width: 1500px) {
@@ -1841,6 +1863,12 @@ address {
     height: 250px;
   }
 }
+@media (max-width: 1400px) and (min-height: 805px) {
+  .banner__img {
+    height: auto;
+    width: 56%;
+  }
+}
 @media (max-width: 1300px) {
   .about-me__title {
     font-size: 32px;
@@ -1891,9 +1919,6 @@ address {
     margin-bottom: 38px;
     font-size: 14px;
     max-width: 75%;
-  }
-  .banner__img {
-    max-width: 58%;
   }
   .banner__btn {
     padding: 14px 18px;
@@ -2581,11 +2606,14 @@ address {
     justify-content: space-between;
   }
   .about-me__list {
-    max-width: 180px;
+    max-width: 190px;
     overflow: hidden;
-    margin-left: auto;
+    margin-left: 33px;
     padding-left: 0;
     margin-right: -8px;
+  }
+  .triumphs-slider__footer {
+    margin-top: 0;
   }
 }
 @media (max-width: 415px) {
@@ -3093,6 +3121,12 @@ address {
     padding-left: 15px;
     padding-right: 15px;
   }
+  .banner-list__item {
+    padding-left: 20px;
+  }
+  .banner-list__item::before {
+    left: 10px;
+  }
 }
 @media (max-width: 350px) {
   .about-me__list {
@@ -3104,7 +3138,59 @@ address {
     height: 100%;
   }
   .banner__container {
-    padding: 200px 15px;
+    padding: 161px 15px;
+  }
+}
+@media (max-width: 350px) {
+  .header .icon-menu {
+    margin-left: 25px;
+  }
+  .header__logo {
+    max-width: 165px;
+  }
+  .banner {
+    padding-top: 125px;
+  }
+  .about-me__name {
+    font-size: 14px;
+  }
+  .about-me__list {
+    margin-left: auto;
+    max-width: 170px;
+  }
+  .adapt-text-here {
+    font-size: 8px;
+  }
+  .about-me__content {
+    max-width: 200px;
+  }
+  .about-me__data-name {
+    font-size: 12px;
+  }
+  .about-me__name {
+    margin-bottom: 9px;
+  }
+  .questions .header-contacts {
+    padding-left: 60px;
+  }
+  .footer-list_oh .footer-list__items {
+    max-width: 290px;
+    white-space: nowrap;
+    overscroll-behavior: none;
+  }
+  .footer-list_oh .footer-list__items::-webkit-scrollbar {
+    height: 0;
+  }
+  .footer-list__name {
+    white-space: nowrap;
+    font-size: 20px;
+  }
+  .footer .socials__link svg {
+    width: 34px;
+    height: 34px;
+  }
+  .footer-list_df .socials {
+    column-gap: 10px;
   }
 }
 .banner-list-services {
@@ -3194,7 +3280,14 @@ address {
   color: #fff;
 }
 
+.services-page .questions {
+  margin-bottom: 85px;
+}
+
 @media (max-width: 980px) {
+  .services-page .questions {
+    margin-bottom: 65px;
+  }
   .prices {
     padding: 65px 0;
   }
@@ -3252,6 +3345,19 @@ address {
   .banner-services::before {
     display: block;
   }
+  .services-page .questions {
+    margin-bottom: 50px;
+  }
+  .about-me__data-name {
+    font-weight: 500;
+  }
+  .prices-list__text {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .prices-list__text:nth-child(2) {
+    padding-left: 20px;
+  }
 }
 .banner-blog-title {
   color: #fff;
@@ -3262,6 +3368,9 @@ address {
   background-position: center;
   background-size: cover;
   height: 100%;
+}
+.banner-blog .banner__img {
+  width: auto;
 }
 .banner-blog .banner__container {
   min-height: 622px;
@@ -3414,6 +3523,11 @@ address {
     height: 310px;
   }
 }
+@media (max-width: 1700.98px) {
+  .banner-blog .banner__img {
+    height: 98%;
+  }
+}
 @media (max-width: 1652.98px) {
   .banner-blog {
     padding-top: 90px;
@@ -3445,6 +3559,11 @@ address {
   }
   .blog-items .triumphs-items__images {
     height: 280px;
+  }
+}
+@media (min-height: 1024px) {
+  .blog-page .banner__container {
+    padding: 0 15px;
   }
 }
 @media (max-width: 1024.98px) {
@@ -3815,7 +3934,7 @@ address {
     padding-bottom: 0;
   }
 }
-@media (max-width: 768.98px) {
+@media (max-width: 940.98px) {
   .article-banner-img {
     display: none;
   }
@@ -3866,5 +3985,12 @@ address {
 @media (max-width: 586.98px) {
   .article-page__footer {
     border-width: 2px 0px 2px 0px;
+  }
+}
+@media (max-width: 350.98px) {
+  .article-page__button {
+    font-size: 13px;
+    padding-right: 19px;
+    padding-left: 19px;
   }
 }

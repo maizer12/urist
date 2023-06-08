@@ -236,7 +236,7 @@
 	}
 }
 
-@include media(768){
+@include media(940){
 	.article-banner-img{
 		display: none;
 	}
@@ -287,5 +287,12 @@
 @include media(586){
 	.article-page__footer{
 		border-width: 2px 0px 2px 0px;
+	}
+}
+@include media(350){
+	.article-page__button{
+		font-size: 13px;
+		padding-right: 19px;
+		padding-left: 19px; 
 	}
 }

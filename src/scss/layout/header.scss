@@ -373,3 +373,18 @@ address{
 .num-styles{
 	font-family: 'Montserrat', sans-serif;
 }
+@media (max-width:760px){
+	.menu__link{
+		&:hover {
+			color:#fff;
+			&:after{
+				width: 0;		 
+			}
+		}
+	}
+}
+@media (max-width:420px){
+	.open{.icon-menu span, .icon-menu::before, .icon-menu::after{
+		height: 3.5px; 
+	}}
+}

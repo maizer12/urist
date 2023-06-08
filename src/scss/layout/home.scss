@@ -40,6 +40,7 @@
 		position: absolute;
 		bottom: 0px;
 		right: 0;
+		height: 98.6%;
 	}
 }
 .banner-list {
@@ -390,7 +391,7 @@
 		margin-bottom: 20px;
 	}
 	&__text {
-		line-height: 1.5;
+		line-height: 1.45;
 		margin-bottom: 46px;
 		color: #000000;
 	}
@@ -612,8 +613,10 @@
 		z-index: 5;
 		padding: 0 20px;
 		position: absolute;
+		pointer-events: none;
 	}
 	&__button {
+		pointer-events: auto;
 		display: block;
 		width: fit-content;
 		@include rgbaColor(bac, #fff, 0.1);
@@ -656,8 +659,8 @@
 		font-size: 18px;
 	}
 	.banner__img {
-		max-width: 58%;
-	}
+	 	max-width: auto;
+	 }
 }
 @media (max-width: 1500px) {
 	.triumphs-items-swiper{
@@ -735,6 +738,13 @@
 			height: 250px;
 		}
 	}
+	
+}
+@media (max-width: 1400px) and (min-height: 805px){
+	.banner__img{
+		height: auto;
+		width: 56%;
+	}
 }
 @media (max-width: 1300px) {
 	.about-me__title {
@@ -786,9 +796,6 @@
 		margin-bottom: 38px;
 		font-size: 14px;
 		max-width: 75%;
-	}
-	.banner__img {
-		max-width: 58%;
 	}
 	.banner__btn {
 		padding: 14px 18px;
@@ -1489,11 +1496,14 @@
 		}
 	}
 	.about-me__list {
-		max-width: 180px;
+		max-width: 190px;
 		overflow: hidden;
-		margin-left: auto;
+		margin-left: 33px;
 		padding-left: 0;
 		margin-right: -8px;
+	}
+	.triumphs-slider__footer{
+		margin-top: 0;
 	}
 }
 @media (max-width: 415px) {
@@ -1911,6 +1921,12 @@
 		padding-left: 15px;
 		padding-right: 15px;
 	}
+	.banner-list__item{
+		padding-left: 20px;
+	}
+	.banner-list__item::before{
+		left: 10px;
+	}
 }
 @media (max-width: 350px) {
 	.about-me__list {
@@ -1923,7 +1939,62 @@
 
 	}
 	.banner__container{
-		padding: 200px 15px;
+		padding: 161px 15px;
 	}
 	
+}
+//new-adapt
+@media (max-width: 350px) {
+	.header .icon-menu{
+		margin-left: 25px;
+	}
+	.header__logo{
+		max-width: 165px;
+	}
+	.banner{
+		padding-top: 125px; 
+	}
+	.about-me__name{
+		font-size: 14px;
+	}
+	.about-me__list{
+		margin-left: auto;
+		max-width: 170px;
+	}
+	.adapt-text-here{
+		font-size: 8px;
+	}
+	.about-me__content {
+		max-width: 200px;
+	}
+	.about-me__data-name {
+		font-size: 12px;
+	}
+	.about-me__name{
+		margin-bottom: 9px;
+	}
+	.questions .header-contacts{
+		padding-left: 60px;
+	}
+	.footer-list_oh .footer-list__items{
+		max-width: 290px;
+		white-space: nowrap;
+		overscroll-behavior: none;
+		&::-webkit-scrollbar {
+			height: 0;
+		}
+	}
+	.footer-list__name{
+		white-space: nowrap;
+		font-size: 20px;
+	}
+	.footer{
+		.socials__link svg{
+			width: 34px;
+			height: 34px;
+		}
+	}
+	.footer-list_df .socials {
+    column-gap: 10px;
+	}
 }

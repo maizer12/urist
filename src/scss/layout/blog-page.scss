@@ -6,7 +6,9 @@
 	background-position: center;
 	background-size: cover;
 	height: 100%;
-
+	.banner__img{
+		width: auto;
+	}
 	.banner__container {
 		min-height: 622px;
 		position: relative;
@@ -152,6 +154,11 @@
 		height: 310px;
 	}}
 }
+@include media(1700){
+	.banner-blog .banner__img{
+		height: 98%;
+	}
+}
 @include media(1652){
 	.banner-blog{
 		padding-top:90px;
@@ -186,6 +193,13 @@
 	.triumphs-items__images{
 		height: 280px;
 	}}
+}
+@media (min-height: 1024px){
+	.blog-page{
+		.banner__container{
+			padding: 0 15px; 
+		}
+	}
 }
 @include media(1024){
   .banner-blog{
